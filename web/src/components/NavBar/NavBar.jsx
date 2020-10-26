@@ -1,20 +1,40 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import SportsTennis from "@material-ui/icons/SportsTennis";
+import Switch from "@material-ui/core/Switch";
+import SportsSoccer from "@material-ui/icons/SportsSoccer";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "wouter";
 import useStyles from "./styles";
 
-function NavBar() {
+function NavBar({ changeTheme = () => {} }) {
+  const [check, setCheck] = React.useState(true);
+
+  const handleChange = () => {
+    setCheck(!check);
+    changeTheme();
+  };
+
   const classes = useStyles();
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" color="default">
       <Toolbar>
-        <SportsTennis className={classes.icon} />
-        <Typography variant="h6" color="inherit" noWrap>
-          Album layout
-        </Typography>
+        <SportsSoccer className={classes.icon} />
+        <Link href="/">
+          <Typography variant="h6" color="inherit" noWrap>
+            My new kick
+          </Typography>
+        </Link>
+        <div className={classes.switchTheme}>
+          <Typography>Tema</Typography>
+          <Switch
+            checked={check}
+            onChange={handleChange}
+            color="default"
+            inputProps={{ "aria-label": "primary checkbox" }}
+          />
+        </div>
       </Toolbar>
     </AppBar>
   );

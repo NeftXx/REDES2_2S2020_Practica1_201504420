@@ -9,10 +9,15 @@ function Footer() {
   return (
     <footer className={classes.footer}>
       <Typography variant="h6" align="center" gutterBottom>
-        Footer
+        My new kick
       </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
+      <Typography
+        variant="subtitle1"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
+        Página hecha para la practica 1 de Redes 2
       </Typography>
       <Copyright />
     </footer>
