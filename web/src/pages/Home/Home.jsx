@@ -22,7 +22,7 @@ export default function Home() {
             color="textPrimary"
             gutterBottom
           >
-            My new kick
+            My new kick - PAGE 1
           </Typography>
           <Typography
             variant="h5"
@@ -35,7 +35,6 @@ export default function Home() {
         </Container>
       </div>
       <Container className={classes.cardGrid} maxWidth="md">
-        {/* End hero unit */}
         <Grid container spacing={4}>
           {sneakers.map((sneaker) => (
             <Grid item key={sneaker.id} xs={12} sm={6} md={4}>
