@@ -22,7 +22,7 @@ export default function Home() {
             color="textPrimary"
             gutterBottom
           >
-            My new kick - PAGE 1
+            My new kick - PAGE 2
           </Typography>
           <Typography
             variant="h5"

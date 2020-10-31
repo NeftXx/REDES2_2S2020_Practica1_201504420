@@ -15,6 +15,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt update
 sudo apt install yarn -y
 git clone https://github.com/NeftXx/REDES2_2S2020_Practica1_201504420.git redes2
+git checkout page2
 cd redes2/web
 yarn install
 yarn run build
